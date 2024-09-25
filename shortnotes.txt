@@ -1,0 +1,32 @@
+>>whoami
+>>ipconfig
+>>users
+>>cd
+
+>>unix princlple<<
+.everything is a file
+.configuration data stored in text
+.Ability to chain program together
+to perform complex task.
+
+linux origin
+.Linux torvalds
+ a>Finnish college student in 1991
+ b> Created Kernel
+
+why Linux
+.Linux is Unis like O.S.
+.Multi-user and multi-tasking
+.wide hardware support
+.fully supported
+
+>>ssh secure shell
+.it will establish the secure connection
+between client and server, the connection is
+incrypted no one can decript the connection
+
+.telnet is not secure at all
+
+
+
+

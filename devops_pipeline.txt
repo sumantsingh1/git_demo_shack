@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git check') {
+            steps {
+               git branch: 'main', url: 'https://github.com/M121221/ai-leads'
+            }
+        }
+         stage('Mven build') {
+            steps {
+             sh "mvn clean package"
+            }
+        }
+         stage('tomcat deploy') {
+            steps {
+            sshagent(['tomcat']) {
+                    sh "scp -o StrictHostKeyChecking=no target/ai-leads.war ec2-user@172.31.36.125:/opt/tomcat9/webapps"
+                    sh "ssh ec2-user@172.31.36.125 /opt/tomcat9/bin/shutdown.sh"
+                    sh "ssh ec2-user@172.31.36.125 /opt/tomcat9/bin/startup.sh"
+              }
+            }
+        }
+    }
+}
