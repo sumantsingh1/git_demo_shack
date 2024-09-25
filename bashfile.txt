@@ -5,3 +5,5 @@ sudo systemctl start httpd
 sudo systemctl status httpd
 sudo chkconfig httpd on
 sudo echo "Welcome to Server1"  > /var/www/html/index.html
+
+sumant_develop
